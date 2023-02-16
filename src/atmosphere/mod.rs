@@ -60,8 +60,13 @@ fn temperature(tmb: f32, lmb: f32, h: f32, hb: f32) -> f32 {
 mod tests {
     use crate::atmosphere::get_pressure;
     #[test]
-    fn pressure_at_3km() {
+    fn test_pressure_at_1km() {
         let some_result = get_pressure(1.0);
         assert_eq!(f32::floor(some_result), 89874.0);
+    }
+    #[test]
+    fn test_pressure_at_50km() {
+        let some_result = get_pressure(50.0);
+        assert_eq!(f32::floor(some_result), 75.0);
     }
 }
