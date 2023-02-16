@@ -1,8 +1,18 @@
 [package]
-name = "coesa"
+name = "atmus"
 version = "0.1.0"
 edition = "2021"
+license = "GPL-3.0-or-later"
+license-file = "LICENSE"
+description = "Atmospheric modeling, focused on the US 1976 Standard Atmosphere for now."
+repository = "https://github.com/OwenShepherd/atmus"
+homepage = "https://github.com/OwenShepherd/atmus"
+documentation = "https://github.com/OwenShepherd/atmus"
+readme = "README.md"
+keywords = ["aerospace", "planes", "atmosphere", "engineering", "science"]
+categories = ["aerospace", "science"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+

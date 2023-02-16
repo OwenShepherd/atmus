@@ -15,3 +15,6 @@ mod basic_usage {
 Currently, only `get_pressure` is tested. It takes one parameter as input: the 
 altitude in kilometers.
 
+## Development References
+- [Rust API Guidelines](https://rust-lang.github.io/api-guidelines/)
+
