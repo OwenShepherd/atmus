@@ -1,5 +1,5 @@
 // Constants taken from reference, page 2.
-pub const RSTAR: f32 = 8.31432e-3; // [N*m/kmol/K]; K, The gas constant.
+pub const RSTAR: f32 = 8.31432; // [N*m/kmol/K]; K, The gas constant.
 pub const P0: f32 = 101325.0; // [N/m/m]; P_0, Pressure at sea level.
 pub const G0: f32 = 9.80665; // [m/s/s]; g_0, Acceleration due to gravity at sea-level.
 pub const T0: f32 = 288.15; // [K] T_0, Temperature at sea level.

@@ -61,7 +61,7 @@ mod tests {
     use crate::atmosphere::get_pressure;
     #[test]
     fn pressure_at_3km() {
-        let some_result = get_pressure(3000.0);
-        assert_eq!(some_result, 1.0);
+        let some_result = get_pressure(1.0);
+        assert_eq!(f32::floor(some_result), 89874.0);
     }
 }
