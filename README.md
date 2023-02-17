@@ -14,6 +14,6 @@ Currently, only `get_pressure` is tested. It takes one parameter as input: the
 altitude in kilometers.
 
 ## Development References
-- [Rust API Guidelines](https://rust-lang.github.io/api-guidelines/)
+- [Rust API Guidelines]("https://rust-lang.github.io/api-guidelines/")
 - [Versioning SemVer Compatibility]("https://doc.rust-lang.org/cargo/reference/semver.html")
 
