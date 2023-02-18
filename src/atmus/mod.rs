@@ -1,6 +1,14 @@
+/// A set of numerical / scientific constants.
 mod constants;
 
-pub fn get_pressure(height: f32) -> f32 {
+/// Main logic. Provide a height in km, and receive the pressure and temperature.
+pub fn atmus(height: f32) -> (f32,f32) {
+    let current_pressure = get_pressure(height);
+    let current_temperature: f32 = get_temperature(height);
+    return (current_pressure, current_temperature);
+}
+
+fn get_pressure(height: f32) -> f32 {
     let p0 = constants::P0;
     let lmb0 = constants::TEMPERATURE_HEIGHT_GRADIENT[0].1;
     let h0 = constants::TEMPERATURE_HEIGHT_GRADIENT[0].0;
@@ -23,7 +31,7 @@ pub fn get_pressure(height: f32) -> f32 {
     return 0.0;
 }
 
-pub fn pressure(tmb: f32, lmb: f32, h: f32, hb: f32, pb: f32) -> f32 {
+fn pressure(tmb: f32, lmb: f32, h: f32, hb: f32, pb: f32) -> f32 {
     if lmb == 0.0 {
         return pb*(f32::exp((-1.0 * constants::G0 * constants::M0 * (h-hb))/(constants::RSTAR*tmb)));
     } else {
@@ -32,7 +40,7 @@ pub fn pressure(tmb: f32, lmb: f32, h: f32, hb: f32, pb: f32) -> f32 {
     }
 }
 
-pub fn get_temperature(h: f32) -> f32 {
+fn get_temperature(h: f32) -> f32 {
     // Tm = Tmb + Lmb * (H - Hb) Equation 23 from NASA Document ID 19770009539
     let h0 = constants::TEMPERATURE_HEIGHT_GRADIENT[0].0;
     let lmb0 = constants::TEMPERATURE_HEIGHT_GRADIENT[0].1;
@@ -58,7 +66,7 @@ fn temperature(tmb: f32, lmb: f32, h: f32, hb: f32) -> f32 {
 
 #[cfg(test)]
 mod tests {
-    use crate::atmosphere::get_pressure;
+    use crate::atmus::get_pressure;
     #[test]
     fn test_pressure_at_1km() {
         let some_result = get_pressure(1.0);
