@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":[["atmus","Main logic. Provide a height in km, and receive the pressure and temperature."]]};
