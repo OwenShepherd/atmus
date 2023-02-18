@@ -67,6 +67,7 @@ fn temperature(tmb: f32, lmb: f32, h: f32, hb: f32) -> f32 {
 #[cfg(test)]
 mod tests {
     use crate::atmus::get_pressure;
+    use crate::atmus::atmus;
     #[test]
     fn test_pressure_at_1km() {
         let some_result = get_pressure(1.0);
@@ -76,5 +77,10 @@ mod tests {
     fn test_pressure_at_50km() {
         let some_result = get_pressure(50.0);
         assert_eq!(f32::floor(some_result), 75.0);
+    }
+    #[test]
+    fn test_atmus_return_values() {
+        let some_result = atmus(1.0);
+        assert_eq!(f32::floor(some_result.0), 89874.0);
     }
 }
