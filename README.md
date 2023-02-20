@@ -2,9 +2,9 @@
 The 1976 US Standard Atmosphere model, written in Rust.
 
 PLEASE NOTE:  
-- Pressure is tested, but assumes altitude above 0km and below 80km.  
-- Temperature is not tested and does not appear accurate for now.  
-- Expanded altitude regimes are being worked on as of now.  
+- Pressure and temperature are tested, but assumes altitude above 0km and below 80km.  
+- Expanded altitude regimes are being worked on.  
+- Improved documentation and structure are being worked on.  
 ## Usage
 The API exposes a single public function. See the following example:  
 ```rust
