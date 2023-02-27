@@ -2,7 +2,7 @@
 name = "atmus"
 version = "0.2.4"
 edition = "2021"
-license = "GPL-3.0-or-later"
+license = "LGPL-3.0-or-later"
 description = "Atmospheric modeling, focused on the US 1976 Standard Atmosphere for now."
 repository = "https://github.com/OwenShepherd/atmus"
 homepage = "https://github.com/OwenShepherd/atmus"
@@ -14,4 +14,3 @@ categories = ["aerospace", "science"]
 
 [lib]
 crate-type = ["dylib"]
-
