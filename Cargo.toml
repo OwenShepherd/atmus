@@ -1,8 +1,9 @@
 [package]
 name = "atmus"
-version = "0.2.8"
+version = "0.2.9"
 edition = "2021"
-license = "MIT"
+license = "MPL-2.0"
+license-file = "LICENSE"
 description = "Atmospheric modeling, focused on the US 1976 Standard Atmosphere for now."
 repository = "https://github.com/OwenShepherd/atmus"
 homepage = "https://github.com/OwenShepherd/atmus"
